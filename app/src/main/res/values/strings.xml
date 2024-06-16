@@ -1,3 +1,41 @@
 <resources>
     <string name="app_name">My Pokemons</string>
+
+    <!--Content Descriptions-->
+    <string name="filter_icon_content_desc">Filter Icon</string>
+    <string name="pokemon_image">Pokemon\'s image</string>
+    <string name="star_off">Star off</string>
+
+    <!--Pokemons names-->
+    <string name="pokemon1_name">Bulbasaur</string>
+    <string name="pokemon2_name">Scyther</string>
+    <string name="pokemon3_name">Venusaur</string>
+    <string name="pokemon4_name">Ditto</string>
+
+    <!--Pokemons desc-->
+    <string name="pokemons_detail">Pokemon\'s details</string>
+    <string name="pokemon1_desc">A strange seed was planted on its back at birth. The plant sprouts and grows with this POKéMON.</string>
+    <string name="pokemon2_desc">With ninja-like agility and speed, it can create the illusion that there is more than one.</string>
+    <string name="pokemon3_desc">The plant blooms when it is absorbing solar energy. It stays on the move to seek sunlight.</string>
+    <string name="pokemon4_desc">Capable of copying an enemy\'s genetic code to instantly transform itself into a duplicate of the enemy.</string>
+
+    <string name="weight">Weight</string>
+    <string name="height">Height</string>
+    <string name="types">Types</string>
+
+    <!--People stared count-->
+    <string name="people_stared_count">1234</string>
+    <string name="people_stared_count_selected">1235</string>
+
+    <!--Pokemons numbers-->
+    <string name="pokemon_number1">1</string>
+    <string name="pokemon_number2">2</string>
+    <string name="pokemon_number3">3</string>
+    <string name="pokemon_number4">4</string>
+
+    <!--Other-->
+    <string name="share">Share</string>
+
+
+
 </resources>
