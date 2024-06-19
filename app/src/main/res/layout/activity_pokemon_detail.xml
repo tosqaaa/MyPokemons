@@ -48,20 +48,22 @@
             android:background="@color/granite"
             android:padding="8dp"
             app:cardElevation="16dp">
+
             <ImageView
                 android:id="@+id/image"
                 android:layout_width="180dp"
                 android:layout_height="220dp"
                 android:contentDescription="@string/pokemon_image"
-                android:src="@drawable/bulbasaur"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"/>
+                app:layout_constraintTop_toTopOf="parent"
+                tools:src="@drawable/no_pokemon"/>
+
             <TextView
                 android:id="@+id/name"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="8dp"
-                android:fontFamily="@font/inter"
+                android:fontFamily="@font/inter_bold"
                 android:textColor="@color/white"
                 android:textSize="24sp"
                 app:layout_constraintTop_toTopOf="parent"

@@ -17,17 +17,15 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        val rootView = binding.main
 
         val pokemonList = PokemonRepository.getPokemons()
-        for (pokemon in pokemonList.values) {
-            rootView.addView(createPokemonCard(pokemon))
+        pokemonList.forEach{
+            binding.main.addView(createPokemonCard(it.value))
         }
     }
 
     private fun createPokemonCard(pokemon: Pokemon): CardView{
-        val inflater = LayoutInflater.from(this)
-        val binding = PokemonCardBinding.inflate((inflater))
+        val binding = PokemonCardBinding.inflate(LayoutInflater.from(this))
 
         with(binding){
             pokemon.let{poke ->
@@ -44,7 +42,7 @@ class MainActivity : AppCompatActivity() {
                     ViewGroup.LayoutParams.MATCH_PARENT,
                     ViewGroup.LayoutParams.WRAP_CONTENT
                 ).apply{
-                    setMargins(32, 16, 32, 16)
+                    setMargins(dpToPx(8), dpToPx(8), dpToPx(8), dpToPx(8))
                 }
             }
         }
@@ -57,4 +55,6 @@ class MainActivity : AppCompatActivity() {
         intent.putExtra("id", pokemonId)
         startActivity(intent)
     }
+
+    private fun dpToPx(dp: Int)= (dp * resources.displayMetrics.density).toInt()
 }
