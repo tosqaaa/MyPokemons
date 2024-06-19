@@ -2,6 +2,7 @@ package com.example.mypokemons
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.TypedValue
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
@@ -56,5 +57,8 @@ class MainActivity : AppCompatActivity() {
         startActivity(intent)
     }
 
-    private fun dpToPx(dp: Int)= (dp * resources.displayMetrics.density).toInt()
+    private fun dpToPx(dp: Int) = TypedValue.applyDimension(
+        TypedValue.COMPLEX_UNIT_DIP, dp.toFloat(), resources.displayMetrics
+    ).toInt()
+
 }
