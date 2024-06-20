@@ -30,10 +30,10 @@
             android:layout_margin="16dp"
             android:padding="8dp"
             android:gravity="center"
+            android:text="@string/details_title"
             android:textSize="24sp"
             android:textColor="@color/white"
-            android:fontFamily="@font/inter_bold"
-            android:text="@string/pokemons_detail"/>
+            android:fontFamily="@font/inter_bold"/>
     </androidx.appcompat.widget.Toolbar>
 
     <androidx.cardview.widget.CardView
@@ -41,119 +41,116 @@
         android:layout_height="wrap_content"
         android:layout_margin="12dp"
         app:cardCornerRadius="8dp">
+
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/granite"
             android:padding="8dp"
             app:cardElevation="16dp">
+
             <ImageView
                 android:id="@+id/image"
                 android:layout_width="180dp"
                 android:layout_height="220dp"
                 android:contentDescription="@string/pokemon_image"
-                android:src="@drawable/pokemon1"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"/>
+                app:layout_constraintTop_toTopOf="parent"
+                tools:src="@drawable/no_pokemon"/>
+
             <TextView
                 android:id="@+id/name"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="8dp"
+                android:fontFamily="@font/inter_bold"
+                android:textColor="@color/white"
+                android:textSize="24sp"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@id/image"
-                android:text="@string/pokemon1_name"
-                android:fontFamily="@font/inter"
-                android:textColor="@color/white"
-                android:textSize="24sp"/>
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@id/name"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@id/image">
-
-
-            </androidx.cardview.widget.CardView>
-
+                tools:text="@string/pokemon_name"/>
 
             <TextView
                 android:id="@+id/weight_title"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@id/name"
-                app:layout_constraintStart_toEndOf="@id/image"
                 android:layout_margin="8dp"
                 android:text="@string/weight"
                 android:fontFamily="@font/inter"
                 android:textColor="@color/light_gray"
-                android:textSize="20sp"/>
+                android:textSize="20sp"
+                app:layout_constraintTop_toBottomOf="@id/name"
+                app:layout_constraintStart_toEndOf="@id/image"/>
+
 
             <TextView
                 android:id="@+id/weight"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:fontFamily="@font/inter_bold"
+                android:textColor="@color/light_gray"
+                android:textSize="20sp"
+                android:gravity="center"
                 app:layout_constraintTop_toBottomOf="@id/name"
                 app:layout_constraintStart_toEndOf="@id/weight_title"
                 app:layout_constraintEnd_toEndOf="parent"
-                android:layout_margin="8dp"
-                android:text="@string/weight"
-                android:fontFamily="@font/inter_bold"
-                android:textColor="@color/light_gray"
-                android:textSize="20sp"/>
+                tools:text="@string/pokemon_weight"/>
 
             <TextView
                 android:id="@+id/height_title"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@id/weight_title"
-                app:layout_constraintStart_toEndOf="@id/image"
                 android:layout_margin="8dp"
                 android:text="@string/height"
                 android:fontFamily="@font/inter"
                 android:textColor="@color/light_gray"
-                android:textSize="20sp"/>
+                android:textSize="20sp"
+                app:layout_constraintTop_toBottomOf="@id/weight_title"
+                app:layout_constraintStart_toEndOf="@id/image"/>
 
             <TextView
                 android:id="@+id/height"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:gravity="center"
+                android:fontFamily="@font/inter_bold"
+                android:textColor="@color/light_gray"
+                android:textSize="20sp"
                 app:layout_constraintTop_toBottomOf="@id/weight"
                 app:layout_constraintStart_toEndOf="@id/height_title"
                 app:layout_constraintEnd_toEndOf="parent"
-                android:layout_margin="8dp"
-                android:text="@string/height"
-                android:fontFamily="@font/inter_bold"
-                android:textColor="@color/light_gray"
-                android:textSize="20sp"/>
+                tools:text="@string/pokemon_height"/>
 
             <TextView
                 android:id="@+id/types_title"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@id/height_title"
-                app:layout_constraintStart_toEndOf="@id/image"
-                app:layout_constraintEnd_toEndOf="parent"
                 android:layout_margin="8dp"
                 android:text="@string/types"
+                android:gravity="center"
                 android:fontFamily="@font/inter"
                 android:textColor="@color/light_gray"
-                android:textSize="20sp"/>
+                android:textSize="20sp"
+                app:layout_constraintTop_toBottomOf="@id/height_title"
+                app:layout_constraintStart_toEndOf="@id/image"
+                app:layout_constraintEnd_toEndOf="parent"/>
 
             <TextView
                 android:id="@+id/types"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:gravity="center"
+                android:fontFamily="@font/inter_bold"
+                android:textColor="@color/light_gray"
+                android:textSize="20sp"
+                android:ellipsize="end"
                 app:layout_constraintTop_toBottomOf="@id/types_title"
                 app:layout_constraintStart_toEndOf="@id/image"
                 app:layout_constraintEnd_toEndOf="parent"
-
-                android:text="@string/types"
-                android:fontFamily="@font/inter_bold"
-                android:textColor="@color/light_gray"
-                android:textSize="20sp"/>
+                tools:text="@string/pokemon_types"  />
 
             <ImageView
                 android:id="@+id/star"
@@ -167,17 +164,17 @@
                 app:layout_constraintStart_toEndOf="@id/image"/>
 
             <TextView
-                android:id="@+id/people_stared"
+                android:id="@+id/people_liked"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="9dp"
+                android:fontFamily="@font/inter"
+                android:textColor="@color/yellow_star"
+                android:textSize="20sp"
                 app:layout_constraintStart_toEndOf="@id/star"
                 app:layout_constraintTop_toBottomOf="@id/types"
                 app:layout_constraintBottom_toBottomOf="parent"
-                android:text="@string/people_stared_count_selected"
-                android:fontFamily="@font/inter"
-                android:textColor="@color/yellow_star"
-                android:textSize="20sp"/>
+                tools:text="@string/people_stared"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
@@ -188,14 +185,15 @@
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
         android:fontFamily="@font/inter"
-        android:text="@string/pokemon1_desc"
         android:textColor="@color/light_gray"
-        android:textSize="20sp" />
+        android:textSize="20sp"
+        tools:text="@string/pokemon_desc"/>
 
     <Button
         android:layout_width="100dp"
         android:layout_height="50dp"
-        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_gravity="end"
         android:gravity="center"
         android:fontFamily="@font/inter_bold"
         android:text="@string/share"
