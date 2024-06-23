@@ -21,7 +21,7 @@ object PokemonRepository {
             name = "Scyther",
             desc = "With ninja-like agility and speed, it can create the illusion " +
                     "that there is more than one.",
-            types = listOf("grass", "poison"),
+            types = listOf("poison", "grass"),
             weight = 34,
             height = 5,
             imageRes = R.drawable.scyther,
@@ -43,7 +43,7 @@ object PokemonRepository {
             name = "Ditto",
             desc = "Capable of copying an enemy\'s genetic code to instantly transform itself " +
                     "into a duplicate of the enemy.",
-            types = listOf("grass"),
+            types = listOf("bug"),
             weight = 91,
             height = 5,
             imageRes = R.drawable.ditto,
@@ -86,6 +86,7 @@ object PokemonRepository {
     fun getPokemonById(id: Int) = pokemons[id]
 
     fun getPokemons() = pokemons
+
 }
 
 data class Pokemon(
