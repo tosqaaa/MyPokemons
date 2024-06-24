@@ -17,7 +17,6 @@ class PokemonDetailActivity : AppCompatActivity() {
 
         setUpCustomToolbar(binding.toolbar, binding.backIcon)
 
-
         val pokemon = PokemonRepository.getPokemonById(
             intent.getIntExtra("id", -1)
         )
