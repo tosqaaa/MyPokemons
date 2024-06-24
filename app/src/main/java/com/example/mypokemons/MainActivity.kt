@@ -3,10 +3,11 @@ package com.example.mypokemons
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import androidx.core.view.GravityCompat
+import androidx.recyclerview.widget.DividerItemDecoration
 import com.example.mypokemons.databinding.ActivityMainBinding
 import com.example.mypokemons.databinding.FilterHeaderBinding
-import com.example.mypokemons.rv.CustomDividerItemDecoration
 import com.example.mypokemons.rv.PokemonListAdapter
 
 class MainActivity : AppCompatActivity() {
@@ -29,13 +30,22 @@ class MainActivity : AppCompatActivity() {
         binding.recycler.adapter = adapter
         pokemons = PokemonRepository.getPokemons().values.toList()
         adapter.submitItems(pokemons)
-        binding.recycler.addItemDecoration(
-            CustomDividerItemDecoration(this, R.color.light_gray, 10)
-        )
+
+
+        ContextCompat.getDrawable(this, R.drawable.divider)?.let {
+            DividerItemDecoration(this, DividerItemDecoration.VERTICAL).apply {
+                setDrawable(it)
+            }.also {
+                binding.recycler.addItemDecoration(it)
+            }
+        }
+
+
 
         setupFilterDrawer()
         setupFilterListeners()
     }
+
 
     private fun startPokemonDetailActivity(pokemonId: Int) {
         val intent = Intent(this, PokemonDetailActivity::class.java)

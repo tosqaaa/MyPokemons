@@ -7,9 +7,29 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.mypokemons.Pokemon
 import com.example.mypokemons.R
 
+enum class PokemonType(val layoutResId: Int) {
+    BUG(R.layout.item_pokemon_bug),
+    FIRE(R.layout.item_pokemon_fire),
+    GRASS(R.layout.item_pokemon_grass),
+    POISON(R.layout.item_pokemon_poison),
+    DEFAULT(R.layout.item_pokemon_default);
+
+    companion object {
+        fun fromString(type: String): PokemonType {
+            return when (type.lowercase()) {
+                "bug" -> BUG
+                "fire" -> FIRE
+                "grass" -> GRASS
+                "poison" -> POISON
+                else -> DEFAULT
+            }
+        }
+    }
+}
 class PokemonListAdapter(private var onClick: (Pokemon) -> Unit = {}): RecyclerView.Adapter<PokemonViewHolder>() {
 
     private var items = emptyList<Pokemon>()
+
 
     fun submitItems(newItems: List<Pokemon>) {
         val diffResult = DiffUtil.calculateDiff(
@@ -20,13 +40,8 @@ class PokemonListAdapter(private var onClick: (Pokemon) -> Unit = {}): RecyclerV
     }
 
     override fun getItemViewType(position: Int): Int {
-        return when (items[position].types[0]) {
-            "bug" -> R.layout.item_pokemon_bug
-            "fire" -> R.layout.item_pokemon_fire
-            "grass" -> R.layout.item_pokemon_grass
-            "poison" -> R.layout.item_pokemon_poison
-            else -> R.layout.item_pokemon_default
-        }
+        val type = items[position].types.getOrNull(0) ?: "default"
+        return PokemonType.fromString(type).layoutResId
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PokemonViewHolder {
