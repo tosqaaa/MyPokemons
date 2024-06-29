@@ -1,3 +1,40 @@
 <resources>
+    <!--app-->
     <string name="app_name">My Pokemons</string>
+
+    <!--Content Descriptions-->
+    <string name="filter_icon_content_desc">Filter Icon</string>
+    <string name="pokemon_image">Pokemon\'s image</string>
+    <string name="star_off">Star off</string>
+
+    <string name="type_fire">Fire</string>
+    <string name="type_bug">Bug</string>
+    <string name="type_poison">Poison</string>
+    <string name="type_grass">Grass</string>
+
+    <!--Pokemon details-->
+    <string name="weight">Weight</string>
+    <string name="height">Height</string>
+    <string name="types">Types</string>
+    <string name="details_title">Pokemon\'s details</string>
+
+    <!--Other-->
+    <string name="share">Share</string>
+
+    <!--Tools-->
+    <string name="pokemon_name">Pokemon</string>
+    <string name="pokemon_weight">100</string>
+    <string name="pokemon_height">20</string>
+    <string name="pokemon_types">poison, animal</string>
+    <string name="pokemon_id">1</string>
+    <string name="pokemon_desc">A strange seed was planted on its back at birth.
+        The plant sprouts and grows with this POKéMON.</string>
+    <string name="people_stared">1234</string>
+
+    <!--Sorting drawer-->
+    <string name="sorting_title">Sort your Pokemons</string>
+    <string name="sort_by">Sort by:</string>
+    <string name="name">Name</string>
+    <string name="button_sort">Sort</string>
+
 </resources>
