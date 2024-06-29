@@ -22,9 +22,9 @@ class PokemonDetailActivity : AppCompatActivity() {
         )
 
         with(binding) {
-            pokemon.let {poke ->
-                image.setImageResource(poke?.imageRes?: R.drawable.no_pokemon)
-                name.text = poke?.name?: "Pokemon"
+            pokemon.let { poke ->
+                image.setImageResource(poke?.imageRes ?: R.drawable.no_pokemon)
+                name.text = poke?.name ?: "Pokemon"
                 weight.text = poke?.weight.toString()
                 height.text = poke?.height.toString()
                 types.text = poke?.types?.joinToString(separator = ", ") ?: "There are no types"
@@ -33,6 +33,7 @@ class PokemonDetailActivity : AppCompatActivity() {
             }
         }
     }
+
     private fun setUpCustomToolbar(toolbar: Toolbar, button: ImageView) {
         setSupportActionBar(toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(false)

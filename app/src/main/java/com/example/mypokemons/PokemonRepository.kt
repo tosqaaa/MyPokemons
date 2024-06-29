@@ -83,6 +83,7 @@ object PokemonRepository {
             peopleLiked = 987
         ),
     ).associateBy { it.id }
+
     fun getPokemonById(id: Int) = pokemons[id]
 
     fun getPokemons() = pokemons

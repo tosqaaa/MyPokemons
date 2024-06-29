@@ -6,7 +6,7 @@ import com.example.mypokemons.Pokemon
 class PokemonDiffUtilCallback(
     private val oldList: List<Pokemon>,
     private val newList: List<Pokemon>
-): DiffUtil.Callback() {
+) : DiffUtil.Callback() {
 
     override fun getOldListSize() = oldList.size
 

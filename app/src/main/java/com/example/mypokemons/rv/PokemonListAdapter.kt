@@ -17,8 +17,7 @@ enum class PokemonType(val layoutResId: Int) {
             )
         }
     },
-
-    FIRE(R.layout.item_pokemon_fire){
+    FIRE(R.layout.item_pokemon_fire) {
         override fun createPokemonTypeViewHolder(parent: ViewGroup): PokemonViewHolder {
             return PokemonFireViewHolder(
                 LayoutInflater.from(parent.context).inflate(layoutResId, parent, false)
@@ -47,7 +46,8 @@ enum class PokemonType(val layoutResId: Int) {
         }
     };
 
-    abstract fun createPokemonTypeViewHolder(parent: ViewGroup):  PokemonViewHolder
+    abstract fun createPokemonTypeViewHolder(parent: ViewGroup): PokemonViewHolder
+
     companion object {
         fun fromString(type: String): PokemonType {
             return when (type.lowercase()) {
@@ -60,7 +60,9 @@ enum class PokemonType(val layoutResId: Int) {
         }
     }
 }
-class PokemonListAdapter(private var onClick: (Pokemon) -> Unit = {}): RecyclerView.Adapter<PokemonViewHolder>() {
+
+class PokemonListAdapter(private var onClick: (Pokemon) -> Unit = {}) :
+    RecyclerView.Adapter<PokemonViewHolder>() {
 
     private var items = emptyList<Pokemon>()
 
@@ -78,7 +80,8 @@ class PokemonListAdapter(private var onClick: (Pokemon) -> Unit = {}): RecyclerV
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PokemonViewHolder {
-        val pokemonType = PokemonType.entries.find { it.layoutResId==viewType } ?: PokemonType.DEFAULT
+        val pokemonType =
+            PokemonType.entries.find { it.layoutResId == viewType } ?: PokemonType.DEFAULT
         return pokemonType.createPokemonTypeViewHolder(parent)
     }
 

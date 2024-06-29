@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
         filterBinding = FilterHeaderBinding.bind(binding.filterMenu.getHeaderView(0))
 
-        adapter = PokemonListAdapter { pokemon->
+        adapter = PokemonListAdapter { pokemon ->
             startPokemonDetailActivity(pokemon.id)
         }
 
