@@ -28,7 +28,8 @@ class PokemonDefaultViewHolder(view: View) : PokemonViewHolder(view) {
                 pokemonImage.setImageResource(it.imageRes)
                 root.setOnClickListener { onClick(model) }
 
-                val animation = AnimationUtils.loadAnimation(root.context, R.anim.pokemon_list_animation)
+                val animation =
+                    AnimationUtils.loadAnimation(root.context, R.anim.pokemon_list_animation)
                 itemView.startAnimation(animation)
             }
         }
@@ -47,7 +48,8 @@ class PokemonBugViewHolder(view: View) : PokemonViewHolder(view) {
                 pokemonImage.setImageResource(it.imageRes)
                 root.setOnClickListener { onClick(model) }
 
-                val animation = AnimationUtils.loadAnimation(root.context, R.anim.pokemon_list_animation)
+                val animation =
+                    AnimationUtils.loadAnimation(root.context, R.anim.pokemon_list_animation)
                 itemView.startAnimation(animation)
             }
         }
@@ -66,7 +68,8 @@ class PokemonFireViewHolder(view: View) : PokemonViewHolder(view) {
                 pokemonImage.setImageResource(it.imageRes)
                 root.setOnClickListener { onClick(model) }
 
-                val animation = AnimationUtils.loadAnimation(root.context, R.anim.pokemon_list_animation)
+                val animation =
+                    AnimationUtils.loadAnimation(root.context, R.anim.pokemon_list_animation)
                 itemView.startAnimation(animation)
             }
         }
@@ -85,7 +88,8 @@ class PokemonGrassViewHolder(view: View) : PokemonViewHolder(view) {
                 pokemonImage.setImageResource(it.imageRes)
                 root.setOnClickListener { onClick(model) }
 
-                val animation = AnimationUtils.loadAnimation(root.context, R.anim.pokemon_list_animation)
+                val animation =
+                    AnimationUtils.loadAnimation(root.context, R.anim.pokemon_list_animation)
                 itemView.startAnimation(animation)
             }
         }
@@ -104,7 +108,8 @@ class PokemonPoisonViewHolder(view: View) : PokemonViewHolder(view) {
                 pokemonImage.setImageResource(it.imageRes)
                 root.setOnClickListener { onClick(model) }
 
-                val animation = AnimationUtils.loadAnimation(root.context, R.anim.pokemon_list_animation)
+                val animation =
+                    AnimationUtils.loadAnimation(root.context, R.anim.pokemon_list_animation)
                 itemView.startAnimation(animation)
             }
         }
